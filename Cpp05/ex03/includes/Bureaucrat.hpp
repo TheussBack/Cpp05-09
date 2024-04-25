@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrobin <hrobin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/04 15:47:19 by hrobin            #+#    #+#             */
-/*   Updated: 2024/04/01 17:54:44 by hrobin           ###   ########.fr       */
+/*   Created: 2024/03/25 18:08:17 by hrobin            #+#    #+#             */
+/*   Updated: 2024/03/25 18:13:22 by hrobin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 # include <iostream>
 # include <string>
 # include <exception>
+# include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -46,6 +49,8 @@ public:
 	void				incrementGrade();
 	void				decrementGrade();
 
+	void				signForm( Form &form );
+	void				executeForm( Form const & form ) const;
 private:
 
 	std::string const	_name;
